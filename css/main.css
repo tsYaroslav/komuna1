@@ -530,7 +530,7 @@ form {
     box-sizing: border-box; }
   .members-w.more-opened, .bills-w.more-opened {
     height: auto;
-    max-height: max-content;
+    max-height: initial;
     transition: .15s;
     margin-bottom: -20px; }
   .members, .bills {
