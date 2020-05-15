@@ -115,7 +115,8 @@ body input, button {
   background: #f6f6f6;
   text-align: center;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
-  transition: .2s; }
+  transition: .2s;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); }
 
 body input {
   font-size: 15.4px; 
@@ -663,7 +664,7 @@ form {
     height: 71px;
     width: 100%;
     display: inline-block;
-    overflow-y: auto;
+    overflow-y: hidden;
   }
 
   .members, .bills {

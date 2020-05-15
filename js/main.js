@@ -38,7 +38,7 @@ let removeMemberAll = document.querySelectorAll(".remove-member"),
 	active = document.querySelector(".active");
 
 
-// CHECKING IF INPUTS EMPTY 
+// CHECKING IF INPUTS ARE EMPTY 
 function inputCheking(input1, input2, inputCaption1, inputCaption2) {
 	let errorMessage = document.querySelector(".popup.opened .error-message");
 	let inputErrorN = 'Please, enter ' + inputCaption1,
@@ -140,8 +140,6 @@ document.addEventListener('keydown', (e) => {
 	}
 });
 
-
-
 // EDIT
 members.addEventListener("click", (e) => {
 	if(e.target.className === "edit"){
@@ -187,7 +185,7 @@ okForAdd.addEventListener("click", (e) => {
 	      </div>     
 	    </div>
     `;
-	if(!inputCheking(newMemberName,newMemberSalary,"member's name", "member's salary")) return false;
+	if(!inputCheking(newMemberName,newMemberSalary,"member's name.", "member's salary.")) return false;
 	members.insertAdjacentHTML ("beforeEnd", str);		
 	popup.classList.remove("opened");
 	let membersLength = document.querySelectorAll(".member").length;
@@ -204,7 +202,7 @@ okForEdit.addEventListener("click", (e) => {
 	active.dataset.name = newMemberName;
 	active.dataset.salary = newMemberSalary;
 	active.querySelector(".m-name").textContent = newMemberName;
-	if(!inputCheking(newMemberName,newMemberSalary,"member's name", "member's salary")) return false;
+	if(!inputCheking(newMemberName,newMemberSalary,"member's name.", "member's salary.")) return false;
 	popup.classList.remove("opened");
 	active.classList.remove("active");
 });
@@ -214,7 +212,7 @@ okBill.addEventListener("click", (e) => {
     let newBillName = popupBill.querySelector(".popup-bill-name").value;
 	let popupBillSumm = popupBill.querySelector(".popup-bill-summ").value;
     let newBillSumm = popupBill.querySelector(".popup-bill-summ").value;    
-    if(!inputCheking(newBillName,newBillSumm, "bill's name", "bill's amount")) return false;
+    if(!inputCheking(newBillName,newBillSumm, "bill's name.", "bill's amount.")) return false;
 	let strBill = `
 		<div class="input-w">
 	        <p class="ml-label focused">${newBillName}</p>    

@@ -551,7 +551,7 @@ form {
     height: 71px;
     width: 100%;
     display: inline-block;
-    overflow-y: auto; }
+    overflow-y: hidden; }
   .members, .bills {
     overflow-x: visible;
     box-sizing: border-box;
