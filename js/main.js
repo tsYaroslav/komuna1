@@ -191,7 +191,7 @@ okForAdd.addEventListener("click", (e) => {
 	members.insertAdjacentHTML ("beforeEnd", str);		
 	popup.classList.remove("opened");
 	let membersLength = document.querySelectorAll(".member").length;
-	if(membersLength > 2) {
+	if(membersLength > 1) {
 		document.querySelector(".members-ww .more-w").classList.add("show");
 	}
 });
