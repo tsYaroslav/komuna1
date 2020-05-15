@@ -614,8 +614,7 @@ form {
 }
 
 /* MOBILE OR IPADS */
- @media screen and (max-width: 1024px), 
-                   (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+ @media screen and (max-width: 1024px), (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
   .wrapper {
       height: 100%;
   }
@@ -625,13 +624,21 @@ form {
       padding: 0;
   }
 
+  button:hover {    
+      box-shadow: 5px 5px 8px #a3a3a3, -5px -5px 8px #dddddd;
+  }
+
+  button:active {
+        box-shadow: 0px 0px 0px #a3a3a3, 0px 0px 0px #dddddd, inset 5px 5px 10px #a3a3a3, inset -5px -5px 10px #dddddd;
+  }
+
   .members-w, .bills-w {
     box-sizing: border-box;
   }
 
   .members-w.more-opened, .bills-w.more-opened, {
     height: auto;
-    max-height: max-content;
+    max-height: initial;
     transition: .15s;
     margin-bottom: -20px;
   }
@@ -653,14 +660,10 @@ form {
   }
 
   .members-w, .bills-w {
-    max-height: 71px;
+    height: 71px;
     width: 100%;
     display: inline-block;
     overflow-y: auto;
-  }
-
-  .bills-w {
-    max-height: 70px;
   }
 
   .members, .bills {

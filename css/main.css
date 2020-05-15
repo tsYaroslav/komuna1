@@ -526,6 +526,10 @@ form {
   .content {
     margin-bottom: 100px;
     padding: 0; }
+  button:hover {
+    box-shadow: 5px 5px 8px #a3a3a3, -5px -5px 8px #dddddd; }
+  button:active {
+    box-shadow: 0px 0px 0px #a3a3a3, 0px 0px 0px #dddddd, inset 5px 5px 10px #a3a3a3, inset -5px -5px 10px #dddddd; }
   .members-w, .bills-w {
     box-sizing: border-box; }
   .members-w.more-opened, .bills-w.more-opened {
