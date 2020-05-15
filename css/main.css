@@ -543,12 +543,10 @@ form {
     display: inline-block;
     width: 100%; }
   .members-w, .bills-w {
-    max-height: 71px;
+    height: 71px;
     width: 100%;
     display: inline-block;
     overflow-y: auto; }
-  .bills-w {
-    max-height: 70px; }
   .members, .bills {
     overflow-x: visible;
     box-sizing: border-box;
