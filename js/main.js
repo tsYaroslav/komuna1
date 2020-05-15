@@ -123,7 +123,8 @@ let cancelFunc = () => {
 
 // CANCEL BUTTON
 document.body.addEventListener("click", (e) => {
-	if(e.target.className === "cancel" || e.target.classList.contains("opened", "popup")) {
+	let thiss = e.target;		
+	if(thiss.className === "cancel" || thiss.classList.contains("opened", "popup")) {
 		cancelFunc();		
 		e.target.closest(".popup").classList.remove("opened");
 	}
