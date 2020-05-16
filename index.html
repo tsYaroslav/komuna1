@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/simplebar.min.css">
   <script src="js/simplebar.min.js"></script>
 </head>
-<body>
+<body data-simplebar id="body">
   <div class="blur-overlay"></div>
   <div class="wrapper">
     <div class="content">   
@@ -79,6 +79,42 @@
             </div>  
 
             <div class="member" data-name="Member1" data-salary="10">
+              <span class="edit"></span>
+              <div class="m-name-w">
+                <span class="m-name">Me 3</span>
+                <span class="remove-member"></span>             
+                <div>
+                  <span class="m-procent"> (0 %) </span>
+                </div>            
+                <div>
+                  <span class="m-topay">0</span>
+                  <span>uah</span>
+                </div> 
+              </div>
+              <div class="bar-w">
+                <div class="bar"></div>
+              </div>     
+            </div>  
+
+               <div class="member" data-name="Member1" data-salary="10">
+              <span class="edit"></span>
+              <div class="m-name-w">
+                <span class="m-name">Me 3</span>
+                <span class="remove-member"></span>             
+                <div>
+                  <span class="m-procent"> (0 %) </span>
+                </div>            
+                <div>
+                  <span class="m-topay">0</span>
+                  <span>uah</span>
+                </div> 
+              </div>
+              <div class="bar-w">
+                <div class="bar"></div>
+              </div>     
+            </div>  
+
+               <div class="member" data-name="Member1" data-salary="10">
               <span class="edit"></span>
               <div class="m-name-w">
                 <span class="m-name">Me 3</span>
@@ -223,6 +259,8 @@
   
   <script src="js/slip.js"></script>  
   <script src="js/common.js"></script>  
-
+  <script>
+    new SimpleBar(document.getElementById('body'), { autoHide: false });
+  </script>
 </body>
 </html>
