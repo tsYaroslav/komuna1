@@ -328,3 +328,7 @@ function setupSlip(list) {
 setupSlip(document.querySelector('.members'));
 setupSlip(document.querySelector('.bills'));
 
+new SimpleBar(document.getElementById('myElement'), { autoHide: false });
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ 	new SimpleBar(document.getElementById('myElement'), { autoHide: true });
+}
