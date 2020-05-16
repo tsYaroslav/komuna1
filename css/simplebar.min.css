@@ -112,10 +112,11 @@
 
 .simplebar-track {
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
-  z-index: 1;
+  z-index: -1;
   position: absolute;
   right: 4px;
   top: 100px;
+  opacity: 1;
   bottom: 4px;
   border-radius: 25px;
   pointer-events: none;
@@ -154,13 +155,13 @@
 }
 
 .simplebar-scrollbar.simplebar-visible:before {
-  opacity: .5;
+  opacity: 1;
   transition: opacity 0s linear
 }
 
 .simplebar-track.simplebar-vertical {
   top: 4px;
-  width: 25px
+  width: 20px
 }
 
 .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
@@ -212,4 +213,16 @@
   overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none
+}
+
+/* MOBILE OR IPADS */
+ @media screen and (max-width: 1024px), (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .simplebar-track.simplebar-vertical {
+    box-shadow: none;
+    width: 8px;
+  }
+  .simplebar-scrollbar:before {
+      box-shadow:  0px 0px 8px #a3a3a3, 
+              -0px -0px 8px #dddddd;
+  }
 }

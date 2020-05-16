@@ -328,7 +328,3 @@ function setupSlip(list) {
 setupSlip(document.querySelector('.members'));
 setupSlip(document.querySelector('.bills'));
 
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-	document.querySelector("body").removeAttribute("data-simplebar");
-	alert("dfds");
-}
