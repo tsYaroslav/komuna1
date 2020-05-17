@@ -7,8 +7,15 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/simplebar.min.css">
+<!--   <script src="js/simplebar.min.js"></script> -->
+  <script src="js/smooth-scrollbar.js"></script>
+<!--   <script src="js/zenscroll-min.js"></script> -->
+
+<!-- 
+<link type="text/css" href="css/OverlayScrollbars.css" rel="stylesheet"/>
+<script type="text/javascript" src="js/OverlayScrollbars.min.js"></script> -->
 </head>
-<body data-simplebar id="body">
+<body  id="body" >
   <div class="blur-overlay"></div>
   <div class="wrapper">
     <div class="content">   
@@ -202,11 +209,7 @@
 
     </div>
 
-    <section class="calculate-ww calculate-mobile">
-      <div class="calculate-w">
-        <button class="calculate">CALCULATE</button>
-      </div> 
-    </section>
+
 
   </div>
 
@@ -255,12 +258,18 @@
     </div>
   </div>
 
+
+    <section class="calculate-ww calculate-mobile">
+      <div class="calculate-w">
+        <button class="calculate">CALCULATE</button>
+      </div> 
+    </section>
   
-  <script src="js/simplebar.min.js"></script>
   <script src="js/slip.js"></script>  
   <script src="js/common.js"></script>  
   <script>
-    new SimpleBar(document.getElementById('body'), { autoHide: false });
+
   </script>
+
 </body>
 </html>

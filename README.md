@@ -1,2 +1,1 @@
-# komuna1
- 
+# komuna.github.io
