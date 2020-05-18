@@ -243,6 +243,9 @@ form {
   width: 100%;
 }
 
+.member:focus, .input-w:focus {
+  outline: none;
+}
 .member, .member * {
   user-select: none;
 }
@@ -307,7 +310,7 @@ form {
 }
 
 .bar {
-  width: 0px;
+  width: 100%;
   background: #bac1e1;
   height: 4px;
   bottom: 1px;
