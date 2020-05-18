@@ -145,6 +145,7 @@ document.addEventListener('keydown', (e) => {
 members.addEventListener("click", (e) => {
 	if(e.target.className === "edit"){
 		popup.classList.add("opened");
+		popup.querySelector("h2").textContent = "Edit member info";
 		let memberName = e.target.closest(".member").dataset.name;
 		popup.querySelector(".popup-name").value = memberName;	
 		let memberSalary = e.target.closest(".member").dataset.salary;
