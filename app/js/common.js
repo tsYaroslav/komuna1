@@ -62,6 +62,7 @@ function inputCheking(input1, input2, inputCaption1, inputCaption2) {
 // ADD MEMBER BUTTON
 addMemberBtn.addEventListener("click", (e) => {
 	// let member5 = new MemberProto();
+	popup.querySelector("h2").textContent = "Add new member";
 	popup.classList.add("opened");
     let member = document.querySelector('.members');
 	removeMemberAll = document.querySelectorAll(".remove-member");	
