@@ -416,7 +416,7 @@ else {
 		damping: 0.1,
 		alwaysShowTracks: true
 	});
-	document.querySelector("body").addEventListener('click', (e) => {
+	document.querySelector("body").addEventListener('click', e => {
 		if(e.target.classList.contains("calculate")) {
 			scrollbar.scrollTo(0, 0, 250);
 		}
