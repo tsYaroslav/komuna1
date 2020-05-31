@@ -335,7 +335,7 @@ function localStorageData(topayArr, toPayArrProcent){
 	localStorage.bNames = JSON.stringify({bNamesP: bObj});
 }
 
-window.onload = e => {
+window.onload = () => {
 	(function (){
 		// Reading members from locastorage data and inserting it to html 
 		let lsMobj = JSON.parse(localStorage.mNames);
