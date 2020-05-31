@@ -300,12 +300,12 @@ wrapper.addEventListener('click', e =>  {
 		document.querySelector(".members-w").classList.add("more-opened");
 		document.querySelector(".members-ww .more").classList.add("more-active")
 		document.querySelector(".members-ww .more").textContent = "Less";
-		localStorageMembers(topayArr.toPayArr, topayArr.toPayArrProcent);
+		localStorageData(topayArr.toPayArr, topayArr.toPayArrProcent);
 	}
 });
 
 /* LOCAL STORAGE */
-function localStorageMembers(topayArr, toPayArrProcent){
+function localStorageData(topayArr, toPayArrProcent){
 	/* Geathering all member data and saving to the localstorage */
 	let	memberAll = document.querySelectorAll(".member");
 	let mNamesArr = [],
