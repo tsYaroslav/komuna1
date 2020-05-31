@@ -91,7 +91,6 @@ addBillBtn.addEventListener("click", e => {
 members.addEventListener("click", e => {
 	let thiss = e.target;
 	if(thiss.className === "remove-member"){
-		let thiss = e.target;
 		thiss.closest(".member").remove();
 		let membersLength = document.querySelectorAll(".member").length;
 		if(membersLength < 2) {
