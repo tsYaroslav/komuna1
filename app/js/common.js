@@ -92,7 +92,6 @@ members.addEventListener("click", e => {
 	let thiss = e.target;
 	if(thiss.className === "remove-member"){
 		let thiss = e.target;
-		let MemberId = +(e.target.closest(".member").id);
 		thiss.closest(".member").remove();
 		let membersLength = document.querySelectorAll(".member").length;
 		if(membersLength < 2) {
