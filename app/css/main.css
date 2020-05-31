@@ -202,6 +202,8 @@ form {
 .members, .bills {
   display: flex;
   flex-flow: column nowrap; }
+  .members:focus, .bills:focus {
+    outline: none; }
 
 .member {
   border-radius: 25px;

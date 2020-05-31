@@ -253,6 +253,9 @@ form {
 .members, .bills {
   display: flex;
   flex-flow: column nowrap;
+  &:focus {
+    outline: none;
+  }
 }
 
 .member {

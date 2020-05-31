@@ -46,12 +46,12 @@ function inputCheking(input1, input2, inputCaption1, inputCaption2) {
 	if(!input1) {
 		errorMessage.innerHTML = inputErrorN;
 		errorMessage.classList.add("blink", "show");
-		setTimeout(()=>errorMessage.classList.remove("blink"), 1000);
+		setTimeout(() => errorMessage.classList.remove("blink"), 1000);
 		return false;
 	} else if(!input2) {
 		errorMessage.innerHTML = inputErrorS;
 		errorMessage.classList.add("blink", "show");
-		setTimeout(()=>errorMessage.classList.remove("blink"), 1000);
+		setTimeout(() => errorMessage.classList.remove("blink"), 1000);
 		return false;
 	} else {
 		setTimeout(()=>errorMessage.classList.remove("show"), 500);
@@ -60,7 +60,7 @@ function inputCheking(input1, input2, inputCaption1, inputCaption2) {
 }	
 
 // ADD MEMBER BUTTON
-addMemberBtn.addEventListener("click", (e) => {
+addMemberBtn.addEventListener("click", e => {
 	// let member5 = new MemberProto();
 	popup.querySelector("h2").textContent = "Add new member";
 	popup.classList.add("opened");
@@ -77,18 +77,18 @@ addMemberBtn.addEventListener("click", (e) => {
 });
 
 // ADD BILL BUTTON
-addBillBtn.addEventListener("click", (e) => {
+addBillBtn.addEventListener("click", e => {
 	popupBill.classList.add("opened");
 	popupBill.querySelector(".popup-bill-name").value = "";
 	popupBill.querySelector(".popup-bill-summ").value = "";
 	let mlInputsBill = popupBill.querySelectorAll(".ml-input");
-		mlInputsBill.forEach((elem) => {
+		mlInputsBill.forEach(elem => {
 			elem.previousElementSibling.classList.remove("focused");
 	});
 });
 
 // MEMBER: REMOVE
-members.addEventListener("click", (e) => {
+members.addEventListener("click", e => {
 	let thiss = e.target;
 	if(thiss.className === "remove-member"){
 		let thiss = e.target;
@@ -102,7 +102,7 @@ members.addEventListener("click", (e) => {
 });
 
 // BILL: REMOVE
-bills.addEventListener("click", (e) => {
+bills.addEventListener("click", e => {
 	if(e.target.className === "remove-bill"){
 		e.target.closest(".input-w").remove();
 		let billsLength = document.querySelectorAll(".bills-ww .input-w").length;
@@ -115,7 +115,7 @@ bills.addEventListener("click", (e) => {
 // CANCEL & ESC 
 let cancelFunc = () => {
 	let active = document.querySelectorAll(".active");
-	active.forEach((elem) => {
+	active.forEach(elem => {
 		elem.classList.remove("active");
 	});
 	let errorMessageC = document.querySelector(".popup.opened .error-message");
@@ -123,7 +123,7 @@ let cancelFunc = () => {
 }
 
 // CANCEL BUTTON
-document.body.addEventListener("click", (e) => {
+document.body.addEventListener("click", e => {
 	let thiss = e.target;		
 	if(thiss.className === "cancel" || thiss.classList.contains("opened", "popup")) {
 		cancelFunc();		
@@ -132,7 +132,7 @@ document.body.addEventListener("click", (e) => {
 });
 
 // ESC KEYPRESS
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', e => {
 	if (e.keyCode == 27) {
 		cancelFunc();
 		let popups = document.querySelectorAll(".popup");
@@ -143,7 +143,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // EDIT
-members.addEventListener("click", (e) => {
+members.addEventListener("click", e => {
 	if(e.target.className === "edit"){
 		popup.classList.add("opened");
 		popup.querySelector("h2").textContent = "Edit member info";
@@ -166,7 +166,7 @@ members.addEventListener("click", (e) => {
 let newMemberName, newMemberSalary;
 
 // OK FOR ADD MEMBER
-okForAdd.addEventListener("click", (e) => {
+okForAdd.addEventListener("click", e => {
 	newMemberName = popup.querySelector(".popup-name").value;
 	newMemberSalary = popup.querySelector(".popup-salary").value;
 	let str = `
@@ -176,7 +176,7 @@ okForAdd.addEventListener("click", (e) => {
 	        <span class="m-name">${newMemberName}</span>
 	        <span class="remove-member"></span>             
 	        <div>
-	          <span class="m-procent">0</span>
+	          <span class="m-procent">(0%)</span>
 	        </div>            
 	        <div>
 	          <span class="m-topay">0</span>
@@ -198,7 +198,7 @@ okForAdd.addEventListener("click", (e) => {
 });
 
 // OK FOR EDIT
-okForEdit.addEventListener("click", (e) => {
+okForEdit.addEventListener("click", e => {
 	let active = document.querySelector(".active");
 	newMemberName = popup.querySelector(".popup-name").value;
 	newMemberSalary = popup.querySelector(".popup-salary").value;
@@ -211,7 +211,7 @@ okForEdit.addEventListener("click", (e) => {
 });
 
 // OK FOR ADD BILL
-okBill.addEventListener("click", (e) => {
+okBill.addEventListener("click", e => {
     let newBillName = popupBill.querySelector(".popup-bill-name").value;
 	let popupBillSumm = popupBill.querySelector(".popup-bill-summ").value;
     let newBillSumm = popupBill.querySelector(".popup-bill-summ").value;    
@@ -234,7 +234,7 @@ okBill.addEventListener("click", (e) => {
 
 
 // FOCUSED
-document.body.addEventListener("focusin", (e) => {
+document.body.addEventListener("focusin", e => {
 	if(e.target.classList.contains("ml-input")){
 		let mlLable = e.target.previousElementSibling;
 			mlLable.classList.add("focused");
@@ -242,7 +242,7 @@ document.body.addEventListener("focusin", (e) => {
 });
 
 // UNFOCUSED
-document.body.addEventListener("focusout", (e) => {
+document.body.addEventListener("focusout", e => {
 	if(e.target.classList.contains("ml-input")){
 		let mlLable = e.target.previousElementSibling;
 		if(!e.target.value){
@@ -252,7 +252,7 @@ document.body.addEventListener("focusout", (e) => {
 });
 
 // MORE/LESS BUTTONS
-document.body.addEventListener('click', (e) =>  {
+document.body.addEventListener('click', e =>  {
 	if(e.target.classList.contains("more")) {
 		let thiss = e.target;
 		thiss.classList.toggle("more-active");
@@ -265,7 +265,7 @@ document.body.addEventListener('click', (e) =>  {
 
 // CALCULATE
 let wrapper = document.querySelector("body");
-wrapper.addEventListener('click', (e) =>  {
+wrapper.addEventListener('click', e =>  {
 	if(e.target.classList.contains("calculate")) {
 		let billsValuesArr = [], 
 			salaryArrValues = [];
@@ -291,7 +291,6 @@ wrapper.addEventListener('click', (e) =>  {
 			// Summing salary values
 			salaryArrSum += salaryArrValues[i];
 		}
-
 		let topayArr = toPay(salaryArrValues, salaryArrSum, billsValuesArr, billsArrSum);
 		for(let i = 0; i < memberArr.length; i++){
 			mTopayArr[i].innerHTML = topayArr.toPayArr[i].toFixed(0);
@@ -301,11 +300,89 @@ wrapper.addEventListener('click', (e) =>  {
 		document.querySelector(".members-w").classList.add("more-opened");
 		document.querySelector(".members-ww .more").classList.add("more-active")
 		document.querySelector(".members-ww .more").textContent = "Less";
+		localStorageMembers(topayArr.toPayArr, topayArr.toPayArrProcent);
 	}
 });
 
+/* LOCAL STORAGE */
+function localStorageMembers(topayArr, toPayArrProcent){
+	/* Geathering all member data and saving to the localstorage */
+	let	memberAll = document.querySelectorAll(".member");
+	let mNamesArr = [],
+		mSalariesArr = [];
+	for(let i = 0; i < memberAll.length; i++){
+		mNamesArr[i] = memberAll[i].dataset.name;
+		mSalariesArr[i] = memberAll[i].dataset.salary;
+	}
+	let mObj = {
+		mn: mNamesArr,
+		ms: mSalariesArr,
+		mp: toPayArrProcent,
+		mtp: topayArr
+	};
+	localStorage.mNames = JSON.stringify({mNamesP: mObj});
 
-// /* SWIPE TO DELETE ITEMS */
+	/* Geathering all bills data and saving to the localstorage */
+	let billAll = document.querySelectorAll(".bills .input-w");
+	let billNames = [];
+	let billValues = [];
+	for(let i = 0; i < billAll.length; i++){
+		billNames[i] = billAll[i].querySelector(".ml-label").textContent;
+		billValues[i] = billAll[i].querySelector(".ml-input").value;
+	}
+	let bObj = {
+		bn: billNames,
+		bv: billValues
+	};
+	localStorage.bNames = JSON.stringify({bNamesP: bObj});
+}
+
+window.onload = e => {
+	(function (){
+		// Reading members from locastorage data and inserting it to html 
+		let lsMobj = JSON.parse(localStorage.mNames);
+		members.innerHTML = "";	
+		for(let i = 0; i < (lsMobj.mNamesP.mn).length; i++){
+			let str = `
+				<div class="member" data-name="${lsMobj.mNamesP.mn[i]}" data-salary="${lsMobj.mNamesP.ms[i]}">
+				  <span class="edit"></span>
+				  <div class="m-name-w">
+				    <span class="m-name">${lsMobj.mNamesP.mn[i]}</span>
+				    <span class="remove-member"></span>             
+				    <div>
+				      <span class="m-procent">(${(lsMobj.mNamesP.mp[i]).toFixed(0)}%)</span>
+				    </div>            
+				    <div>
+				      <span class="m-topay">${(lsMobj.mNamesP.mtp[i]).toFixed(0)}</span>
+				      <span>uah</span>
+				    </div> 
+				  </div>
+				  <div class="bar-w">
+				    <div class="bar" style="width: ${(lsMobj.mNamesP.mp[i]).toFixed(0)}%"></div>
+				  </div>     
+				</div>
+			`;
+		  members.insertAdjacentHTML ("beforeEnd", str);	
+		}
+
+		// Reading bills from locastorage data and inserting it to html
+		let lsBobj =  JSON.parse(localStorage.bNames);
+		bills.innerHTML = "";	
+		for(let i = 0; i < (lsBobj.bNamesP.bn).length; i++){
+			let strBill = `
+				<div class="input-w">
+			        <p class="ml-label focused">${lsBobj.bNamesP.bn[i]}</p>    
+			        <input type="number" value="${lsBobj.bNamesP.bv[i]}" class="bill ml-input">
+			        <span class="remove-bill"></span>
+		  		</div>
+		    `;
+			bills.insertAdjacentHTML ("beforeEnd", strBill);			
+		}
+	}());
+};
+
+
+/* SWIPE TO DELETE ITEMS */
 function setupSlip(list) {
    list.addEventListener('slip:swipe', function(e) {
         // e.target swiped
@@ -347,4 +424,3 @@ else {
 		}
 	}); 
 }
-
