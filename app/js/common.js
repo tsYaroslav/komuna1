@@ -17,8 +17,8 @@ function toPay(salaryArrValues, salaryArrSum, billsValuesArrey, billsArreySum){
 	let toPayArr = [],
 		toPayArrProcent = []; 
 	for(let i = 0; i < salaryArrValues.length; i++){
-		toPayArrProcent[i] = (100 * salaryArrValues[i]) / salaryArrSum; 
-		toPayArr[i] = billsArreySum / 100 * toPayArrProcent[i];
+		toPayArrProcent[i] = ((100 * salaryArrValues[i]) / salaryArrSum).toFixed(0); 
+		toPayArr[i] = (billsArreySum / 100 * toPayArrProcent[i]).toFixed(1);
 	}
 	return {toPayArr: toPayArr, toPayArrProcent: toPayArrProcent};
 }
@@ -291,9 +291,9 @@ wrapper.addEventListener('click', e =>  {
 		}
 		let topayArr = toPay(salaryArrValues, salaryArrSum, billsValuesArr, billsArrSum);
 		for(let i = 0; i < memberArr.length; i++){
-			mTopayArr[i].innerHTML = topayArr.toPayArr[i].toFixed(0);
-			mTopayArrProcent[i].innerHTML = ("(" + topayArr.toPayArrProcent[i].toFixed(0) + "%)");
-			bars[i].style.width = (topayArr.toPayArrProcent[i].toFixed(0) + "%");
+			mTopayArr[i].innerHTML = topayArr.toPayArr[i];
+			mTopayArrProcent[i].innerHTML = ("(" + topayArr.toPayArrProcent[i] + "%)");
+			bars[i].style.width = (topayArr.toPayArrProcent[i] + "%");
 		}
 		document.querySelector(".members-w").classList.add("more-opened");
 		document.querySelector(".members-ww .more").classList.add("more-active")
@@ -348,15 +348,15 @@ window.onload = () => {
 				    <span class="m-name">${lsMobj.mNamesP.mn[i]}</span>
 				    <span class="remove-member"></span>             
 				    <div>
-				      <span class="m-procent">(${(lsMobj.mNamesP.mp[i]).toFixed(0)}%)</span>
+				      <span class="m-procent">(${(lsMobj.mNamesP.mp[i])}%)</span>
 				    </div>            
 				    <div>
-				      <span class="m-topay">${(lsMobj.mNamesP.mtp[i]).toFixed(0)}</span>
+				      <span class="m-topay">${(lsMobj.mNamesP.mtp[i])}</span>
 				      <span>uah</span>
 				    </div> 
 				  </div>
 				  <div class="bar-w">
-				    <div class="bar" style="width: ${(lsMobj.mNamesP.mp[i]).toFixed(0)}%"></div>
+				    <div class="bar" style="width: ${(lsMobj.mNamesP.mp[i])}%"></div>
 				  </div>     
 				</div>
 			`;
