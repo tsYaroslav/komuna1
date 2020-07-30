@@ -24,7 +24,8 @@ function toPay(salaryArrValues, salaryArrSum, billsValuesArrey, billsArreySum){
 }
 
 let popup = document.querySelector(".member-popup"),
-	popupBill = document.querySelector(".bill-popup"),	
+	popupBill = document.querySelector(".bill-popup"),
+	popupAbout = document.querySelector(".about-popup"),	
 	members = document.querySelector(".members"),
 	cancel = document.querySelector(".cancel"),
 	okForEdit = document.querySelector(".ok-for-edit"),
@@ -397,6 +398,11 @@ setupSlip(document.querySelector('.members'));
 setupSlip(document.querySelector('.bills'));
 
 /* DARK MODE */
+const logo = document.querySelector(".logo");
+logo.addEventListener('click', () => {
+	popupAbout.classList.add("opened");
+});
+
 const darkMode = document.querySelector("#darkmode-switch");
 darkMode.addEventListener('click', () => {
 	body.classList.toggle("dark-mode");

@@ -274,7 +274,7 @@ form {
   display: inline-block;
   background: url(../img/cross.svg) center no-repeat;
   -webkit-background-size: 100%;
-  background-color: #F44336;
+  background-color: #b9c1e1;
   background-size: 38%;
   -webkit-transition: .15s;
   -o-transition: .15s;
@@ -356,8 +356,9 @@ form {
 .popup.opened .popup-content {
   z-index: 1; }
 
-.info-popup p {
-  text-align: left; }
+.about-popup p {
+  text-align: justify;
+  line-height: 22px; }
 
 .error-message {
   display: inline-block;
@@ -520,18 +521,6 @@ body .scrollbar-thumb {
   left: 2px;
   top: 2px; }
 
-.i-btn {
-  display: inline-block;
-  width: initial;
-  border-radius: 50%;
-  margin: 50px 0 0 0;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  font-size: 16px;
-  line-height: 30px; }
-
 /* SWITCH */
 .md-switch.md {
   display: inline-block;
@@ -602,7 +591,7 @@ body .scrollbar-thumb {
 .md-switch label span {
   position: absolute;
   top: 4px;
-  left: -201px;
+  left: -205px;
   display: block;
   font-size: 18px;
   padding-left: 0px;
@@ -621,7 +610,7 @@ body .scrollbar-thumb {
   color: #6d85f1; }
 
 .dark-mode .popup-content {
-  background: #2d2e35;
+  background: #181a21;
   box-shadow: 5px 5px 8px #050608, -5px -5px 8px #313549; }
 
 .dark-mode .remove-member, .dark-mode .remove-bill {
