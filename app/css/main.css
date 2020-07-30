@@ -356,6 +356,9 @@ form {
 .popup.opened .popup-content {
   z-index: 1; }
 
+.info-popup p {
+  text-align: left; }
+
 .error-message {
   display: inline-block;
   background: #f6f6f6;
@@ -385,12 +388,18 @@ form {
 .dots {
   display: inline-block;
   width: 100%;
-  background: url(../img/dots.svg) center no-repeat;
-  height: 7px;
+  /*  background: url(../img/dots.svg) center no-repeat;*/
+  height: 12px;
   position: relative;
-  top: 5px;
+  top: 3px;
   float: left;
   box-shadow: 0px 0px 0px #a3a3a3 0px 0px 0px #dddddd; }
+
+.dash {
+  width: 40px;
+  height: 11px;
+  fill: #b9c1e1;
+  stroke: #e5e5e5; }
 
 @-webkit-keyframes blink {
   0% {
@@ -524,6 +533,11 @@ body .scrollbar-thumb {
   line-height: 30px; }
 
 /* SWITCH */
+.md-switch.md {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 15px; }
+
 .md-switch .md-toggle {
   position: absolute;
   margin-left: -9999px;
@@ -639,6 +653,9 @@ body .scrollbar-thumb {
   background: #222534;
   border: 1px solid #222534;
   box-shadow: inset 5px 5px 10px #050608, inset -5px -5px 10px #313549; }
+
+.dark-mode .dash {
+  fill: #6d85f1; }
 
 /* MOBILE OR IPADS */
 @media screen and (max-width: 1024px), (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
