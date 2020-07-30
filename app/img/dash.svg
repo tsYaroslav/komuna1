@@ -1,7 +1,7 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <symbol id="dash" viewBox="0 0 64 64">
+    <symbol id="dash"  viewBox="0 0 119 28.33">
         <g id="Refresh_1_">
-          <path fill="#070707"  d="M104.8,28.3H14.2C6.3,28.3,0,22,0,14.2v0C0,6.3,6.3,0,14.2,0h90.7c7.8,0,14.2,6.3,14.2,14.2v0
+          <path  d="M104.8,28.3H14.2C6.3,28.3,0,22,0,14.2v0C0,6.3,6.3,0,14.2,0h90.7c7.8,0,14.2,6.3,14.2,14.2v0
     C119,22,112.7,28.3,104.8,28.3z"/>
         </g>
     </symbol>
