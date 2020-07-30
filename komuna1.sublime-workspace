@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"bu",
+				"button"
+			],
+			[
+				"ml",
+				"mlLable"
+			],
+			[
+				"ml-",
+				"ml-label"
+			],
+			[
+				"Nma",
+				"mNames"
+			],
+			[
 				"q",
 				"querySelector"
 			],
@@ -86,14 +102,6 @@
 			[
 				"f",
 				"focused"
-			],
-			[
-				"ml",
-				"ml-input"
-			],
-			[
-				"ml-",
-				"ml-input"
 			],
 			[
 				"clas",
@@ -199,7 +207,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 5955,
+				"buffer_size": 5956,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -212,15 +220,14 @@
 			"settings":
 			{
 				"buffer_size": 40643,
-				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/sass/main.scss",
+			"contents": "/* LOCAL STORAGE */\nfunction localStorageMembers(topayArr, toPayArrProcent){\n\tlet\tmemberAll = document.querySelectorAll(\".member\");\n\tlet mNamesArr = [],\n\t\tmSalariesArr = [];\n\tfor(let i = 0; i < memberAll.length; i++){\n\t\tmNamesArr = memberAll[i].dataset.name;\n\t\tmSalariesArr = memberAll[i].dataset.salary;\n\t}\n\tlocalStorage.mNames = JSON.stringify({mn: mNamesArr});\n\tlocalStorage.mSalaries = JSON.stringify({ms: mSalariesArr});\n\tlocalStorage.mProcents = JSON.stringify({mp: toPayArrProcent});\n\tlocalStorage.mToPay = JSON.stringify({mtp: topayArr});\n}\n\nwindow.onload = e => {\n\n\tfunction InneringElementsBeforeStart (){\n\t\tlet lsNames = JSON.parse(localStorage.mNames),\n\t\t\tlsSalary = JSON.parse(localStorage.mSalaries),\n\t\t\tlsProcent = JSON.parse(localStorage.mProcents),\n\t\t\tlsToPay = JSON.parse(localStorage.mToPay);\n\t\tmembers.innerHTML = \"\";\t\n\t\tfor(let i = 0; i < (lsNames.mn).length; i++){\n\t\t\tlet str = `\n\t\t\t\t<div class=\"member\" data-name=\"${lsNames.mn[i]}\" data-salary=\"${lsSalary.ms[i]}\">\n\t\t\t\t  <span class=\"edit\"></span>\n\t\t\t\t  <div class=\"m-name-w\">\n\t\t\t\t    <span class=\"m-name\">${lsNames.mn[i]}</span>\n\t\t\t\t    <span class=\"remove-member\"></span>             \n\t\t\t\t    <div>\n\t\t\t\t      <span class=\"m-procent\">(${(lsProcent.mp[i]).toFixed(0)}%)</span>\n\t\t\t\t    </div>            \n\t\t\t\t    <div>\n\t\t\t\t      <span class=\"m-topay\">${(lsToPay.mtp[i]).toFixed(0)}</span>\n\t\t\t\t      <span>uah</span>\n\t\t\t\t    </div> \n\t\t\t\t  </div>\n\t\t\t\t  <div class=\"bar-w\">\n\t\t\t\t    <div class=\"bar\" style=\"width: ${(lsProcent.mp[i]).toFixed(0)}%\"></div>\n\t\t\t\t  </div>     \n\t\t\t\t</div>\n\t\t\t`;\n\t\t  members.insertAdjacentHTML (\"beforeEnd\", str);\t\n\t\t}\n\t}\n\tInneringElementsBeforeStart();\n\n};",
 			"settings":
 			{
-				"buffer_size": 12485,
+				"buffer_size": 1652,
 				"line_ending": "Windows"
 			}
 		},
@@ -228,7 +235,27 @@
 			"file": "app/sass/main.scss",
 			"settings":
 			{
-				"buffer_size": 12485,
+				"buffer_size": 12520,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/C/Users/2C/Desktop/komuna_/main-copy.js",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/sass/main.scss",
+			"settings":
+			{
+				"buffer_size": 12520,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -237,8 +264,16 @@
 			"file": "app/js/common.js",
 			"settings":
 			{
-				"buffer_size": 11540,
+				"buffer_size": 14036,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "/* LOCAL STORAGE */\nfunction localStorageMembers(topayArr, toPayArrProcent){\n\tlet\tmemberAll = document.querySelectorAll(\".member\");\n\tlet jsmMemberAll = [],\n\t\tjssMemberAll = [];\n\tfor(let i = 0; i < memberAll.length; i++){\n\t\tjsmMemberAll[i] = memberAll[i].dataset.name;\n\t\tjssMemberAll[i] = memberAll[i].dataset.salary;\n\t}\n\tlocalStorage.userNames = JSON.stringify({uname: jsmMemberAll});\n\tlocalStorage.userSalaries = JSON.stringify({usalary: jssMemberAll});\n\tlocalStorage.userProcents = JSON.stringify({uprocent: toPayArrProcent});\n\tlocalStorage.userToPay = JSON.stringify({utoppay: topayArr});\n}\n\nwindow.onload = e => {\n\n\tfunction InneringElementsBeforeStart (){\n\t\tlet user = JSON.parse(localStorage.userNames),\n\t\t\tsalary = JSON.parse(localStorage.userSalaries),\n\t\t\tprocent = JSON.parse(localStorage.userProcents),\n\t\t\ttopayy = JSON.parse(localStorage.userToPay);\n\t\tmembers.innerHTML = \"\";\t\n\t\tfor(let i = 0; i < (user.uname).length; i++){\n\t\t\tlet str = `\n\t\t\t\t<div class=\"member\" data-name=\"${user.uname[i]}\" data-salary=\"${salary.usalary[i]}\">\n\t\t\t\t  <span class=\"edit\"></span>\n\t\t\t\t  <div class=\"m-name-w\">\n\t\t\t\t    <span class=\"m-name\">${user.uname[i]}</span>\n\t\t\t\t    <span class=\"remove-member\"></span>             \n\t\t\t\t    <div>\n\t\t\t\t      <span class=\"m-procent\">(${(procent.uprocent[i]).toFixed(0)}%)</span>\n\t\t\t\t    </div>            \n\t\t\t\t    <div>\n\t\t\t\t      <span class=\"m-topay\">${(topayy.utoppay[i]).toFixed(0)}</span>\n\t\t\t\t      <span>uah</span>\n\t\t\t\t    </div> \n\t\t\t\t  </div>\n\t\t\t\t  <div class=\"bar-w\">\n\t\t\t\t    <div class=\"bar\" style=\"width: ${(procent.uprocent[i]).toFixed(0)}%\"></div>\n\t\t\t\t  </div>     \n\t\t\t\t</div>\n\t\t\t`;\n\t\t  members.insertAdjacentHTML (\"beforeEnd\", str);\t\n\t\t}\n\t}\n\tInneringElementsBeforeStart();\n\n};",
+			"settings":
+			{
+				"buffer_size": 1715,
 				"line_ending": "Windows"
 			}
 		},
@@ -250,7 +285,6 @@
 			"settings":
 			{
 				"buffer_size": 4133,
-				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -262,7 +296,6 @@
 			"settings":
 			{
 				"buffer_size": 60149,
-				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -274,7 +307,6 @@
 			"settings":
 			{
 				"buffer_size": 11911,
-				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -286,7 +318,6 @@
 			"settings":
 			{
 				"buffer_size": 40704,
-				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -344,6 +375,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/2C/AppData/Local/Microsoft/Windows/INetCache/IE/J3U8SYF4/Klinicheskoe_Issledovanie_Kostey_Sustavov_I_Myshts_k_Bukup[1].pdf",
 		"/C/Users/2C/Documents/GitHub/komuna1/js/common.js",
 		"/C/Users/2C/Documents/GitHub/komuna1/app/index.html",
 		"/C/Users/2C/Documents/GitHub/komuna1/komuna1.sublime-workspace",
@@ -380,7 +412,7 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -395,6 +427,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"MemberId",
+			"submit",
+			"textContent",
+			"members",
+			"jspMemberAll",
+			");",
+			"button",
 			".member {",
 			".scrollbar-thum",
 			"body .scrollbar-thumb {",
@@ -441,15 +480,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5955,
+						"buffer_size": 5956,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4943,
-								4943
+								1956,
+								1956
 							]
 						],
 						"settings":
@@ -459,10 +498,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2022.0,
+						"translation.y": 2418.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -492,60 +531,58 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 12,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 2,
-					"file": "app/sass/main.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12485,
+						"buffer_size": 1652,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4365,
-								4365
+								656,
+								662
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3885.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
 				{
 					"buffer": 3,
 					"file": "app/sass/main.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12485,
+						"buffer_size": 12520,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								296,
-								296
+								391,
+								391
 							]
 						],
 						"settings":
@@ -558,24 +595,82 @@
 						"translation.y": 15.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "app/js/common.js",
+					"file": "/C/Users/2C/Desktop/komuna_/main-copy.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11540,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4745,
-								4745
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/sass/main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12520,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5504.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/js/common.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14036,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11351,
+								11351
 							]
 						],
 						"settings":
@@ -584,14 +679,42 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2102.0,
+						"translation.y": 5936.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1715,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1715
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "css/simplebar.min.css",
 					"semi_transient": false,
 					"settings":
@@ -617,11 +740,11 @@
 						"translation.y": 698.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 9,
 					"file": "js/simplebar.min.js",
 					"semi_transient": false,
 					"settings":
@@ -645,11 +768,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 10,
 					"file": "css/main.css",
 					"semi_transient": false,
 					"settings":
@@ -675,11 +798,11 @@
 						"translation.y": 987.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 11,
 					"file": "js/slip.js",
 					"semi_transient": false,
 					"settings":
@@ -705,11 +828,11 @@
 						"translation.y": 1134.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 12,
 					"file": "gulpfile.js",
 					"semi_transient": false,
 					"settings":
@@ -733,7 +856,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -767,7 +890,7 @@
 		"cols":
 		[
 			0.0,
-			0.537288135593,
+			0.3802259887,
 			1.0
 		],
 		"rows":

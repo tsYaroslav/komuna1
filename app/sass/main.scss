@@ -466,6 +466,7 @@ form {
   position: relative;
   top: 5px;
   float: left;
+  box-shadow: 0px 0px 0px #a3a3a3 0px 0px 0px #dddddd;
 }
 
 
@@ -614,6 +615,151 @@ body .scrollbar-thumb {
   left: 2px;
   top: 2px;
 }
+
+.i-btn {
+  display: inline-block;
+  width: initial;
+  border-radius: 50%;
+  margin: 50px 0 0 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+/* SWITCH */
+.md-switch .md-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.md-switch .md-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.md-switch input.md-toggle-round + label {
+  padding: 2px;
+  width: 50px;
+  height: 25px;
+  float: right;
+}
+
+.md-switch label:before, .md-switch label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+.md-switch label:before {
+  right: 1px;
+  background: #DDDDDD;
+  box-shadow: 0px 0px 0px #a3a3a3, 0px 0px 0px #dddddd, inset 3px 3px 4px #a3a3a3, inset -3px -3px 4px #dddddd;
+  border-radius: 60px;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.md-switch label:after {
+  width: 20px;
+  height: 20px;
+  margin:auto 4px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.24);
+  border-radius: 100%;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+.md-switch input.md-toggle-round:checked + label:before {
+  background-color: #6d85f1;
+  box-shadow: inset 3px 3px 4px #050608, inset -3px -3px 4px #313549;
+}
+.md-switch input.md-toggle-round:checked + label:after {
+  margin-left: 27px;
+  background: #222534;
+}
+.md-switch input.md-toggle-round:checked + label span {
+  color: #6d85f1;
+}
+.md-switch label span {
+  position: absolute;
+  top: 4px;
+  left: -201px;
+  display: block;
+  font-size: 18px;
+  padding-left: 0px;
+  box-sizing: border-box;
+  height: 40px;
+  margin-left: 0px;
+  vertical-align: middle;
+  color: #555555;
+}
+
+
+/* DARK MODE */
+.dark-mode {
+  background: #181a21;
+  transition: .15s;
+}
+
+.dark-mode * {
+  color: #6d85f1;
+}
+
+.dark-mode .popup-content {
+  background: #2d2e35;
+  box-shadow: 5px 5px 8px #050608, -5px -5px 8px #313549;
+}
+
+.dark-mode .remove-member, .dark-mode .remove-bill {
+  background-color: #6d85f0;
+  box-shadow: -5px 0px 15px 1px #232944;
+}
+
+.dark-mode .logo {
+  border: 10px solid #222534;
+  background: #6d85f0;
+  box-shadow: 5px 5px 8px #050608, -5px -5px 8px #313549;
+}
+
+.dark-mode button,
+.dark-mode .member {
+  background: #222534;
+  box-shadow: 5px 5px 8px #050608, -5px -5px 8px #313549;
+}
+
+.dark-mode button:hover {
+  box-shadow: 0px 0px 0px #050608, 0px 0px 0px #313549, inset 5px 5px 10px #050608, inset -5px -5px 10px #313549;
+  transition: .1s;
+}
+
+.dark-mode .bar-w {
+  border: 1px solid #6d85f1;
+  box-shadow: none;
+}
+
+.dark-mode .bar {
+  background: #6d85f1;
+}
+
+.dark-mode input {
+  background: #222534;
+  border: 1px solid #222534;
+  box-shadow: inset 5px 5px 10px #050608, inset -5px -5px 10px #313549;
+ }
+
+
 
 /* MOBILE OR IPADS */
  @media screen and (max-width: 1024px), (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {

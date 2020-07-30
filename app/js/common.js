@@ -396,6 +396,12 @@ function setupSlip(list) {
 setupSlip(document.querySelector('.members'));
 setupSlip(document.querySelector('.bills'));
 
+/* DARK MODE */
+const darkMode = document.querySelector("#darkmode-switch");
+darkMode.addEventListener('click', () => {
+	body.classList.toggle("dark-mode");
+});
+
 
 /* SCROLL TO TOP */
 
