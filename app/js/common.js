@@ -170,7 +170,11 @@ okForAdd.addEventListener("click", e => {
 	newMemberSalary = popup.querySelector(".popup-salary").value;
 	let str = `
 	    <div class="member" data-name="${newMemberName}" data-salary="${newMemberSalary}">
-	      <span class="edit"></span>
+	      <span class="edit">
+			<svg class="gear">
+              <use xlink:href="#gear"></use>
+            </svg>
+	      </span>
 	      <div class="m-name-w">
 	        <span class="m-name">${newMemberName}</span>
 	        <span class="remove-member"></span>             
@@ -179,7 +183,7 @@ okForAdd.addEventListener("click", e => {
 	        </div>            
 	        <div>
 	          <span class="m-topay">0</span>
-	          <span>uah</span>
+	          <span>$</span>
 	        </div> 
 	      </div>
 	      <div class="bar-w">
@@ -344,7 +348,11 @@ window.onload = () => {
 		for(let i = 0; i < (lsMobj.mNamesP.mn).length; i++){
 			let str = `
 				<div class="member" data-name="${lsMobj.mNamesP.mn[i]}" data-salary="${lsMobj.mNamesP.ms[i]}">
-				  <span class="edit"></span>
+				  <span class="edit">
+				    <svg class="gear">
+                      <use xlink:href="#gear"></use>
+                    </svg>
+                  </span>
 				  <div class="m-name-w">
 				    <span class="m-name">${lsMobj.mNamesP.mn[i]}</span>
 				    <span class="remove-member"></span>             
@@ -353,7 +361,7 @@ window.onload = () => {
 				    </div>            
 				    <div>
 				      <span class="m-topay">${(lsMobj.mNamesP.mtp[i])}</span>
-				      <span>uah</span>
+				      <span>$</span>
 				    </div> 
 				  </div>
 				  <div class="bar-w">
@@ -378,6 +386,11 @@ window.onload = () => {
 			bills.insertAdjacentHTML ("beforeEnd", strBill);			
 		}
 	}());
+	
+	if(Number(localStorage.darkMode) === 1) {
+		body.classList.add("dark-mode");
+		document.querySelector('#darkmode-switch').setAttribute("checked", "checked");
+	}
 };
 
 
@@ -406,6 +419,21 @@ logo.addEventListener('click', () => {
 const darkMode = document.querySelector("#darkmode-switch");
 darkMode.addEventListener('click', () => {
 	body.classList.toggle("dark-mode");
+	if(body.classList.contains("dark-mode")){
+		localStorage.darkMode = 1;
+	} else {
+		localStorage.darkMode = 0;
+	}
+});
+
+
+
+/* TOOLTIP */
+logo.addEventListener('mouseover', () => {
+	document.querySelector(".tooltip").classList.add("visible");
+});
+logo.addEventListener('mouseleave', () => {
+	document.querySelector(".tooltip").classList.remove("visible");
 });
 
 

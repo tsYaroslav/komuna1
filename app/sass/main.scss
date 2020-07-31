@@ -50,6 +50,10 @@ html, body {
   color: #414554;
 }
 
+svg {
+  pointer-events: none;
+}
+
 body {
   background: #f6f6f6;
 }
@@ -67,13 +71,35 @@ body {
 }
 
 .logo {
-    display: inline-block;
-    border: 10px solid rgba(255, 255, 255, .8);
-    border-radius: 50%;
-    padding: 20px 22px 18px;
-    background-color: #e5e8f6;
-    box-shadow: -10px -10px 10px #fff, 10px 10px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+  display: inline-block;
+  border: 10px solid rgba(255, 255, 255, .8);
+  border-radius: 50%;
+  padding: 20px 22px 18px;
+  background-color: #e5e8f6;
+  box-shadow: -10px -10px 10px #fff, 10px 10px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.tooltip {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  top: 0;
+  background: url(../img/tooltip.svg) repeat;
+  color: #000;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  transition: .1s;
+  opacity: 0;
+  -webkit-background-size: 45%;
+  background-size: 45%;
+  background-position: center;
+}
+.tooltip.visible {
+  opacity: 1;
+  transition: .1s;
 }
 
 .logo-svg,
@@ -531,7 +557,7 @@ form {
   width: 20px;
   height: 20px;
   margin-right: 5px;
-  background: url(../img/gear.svg) no-repeat center;
+/*  background: url(../img/gear.svg) no-repeat center;*/
   transform: translateY(-50%);
   -webkit-background-size: 100%;
   background-size: 100%;  
@@ -540,6 +566,12 @@ form {
   left: 10px;
   transition: .1s;
    transform-origin: center;
+}
+
+.edit svg.gear {
+    width: 20px;
+    height: 20px;
+    fill: #4f5361;
 }
 
 .member .edit:hover {
@@ -766,6 +798,24 @@ body .scrollbar-thumb {
   fill: #6d85f1;
  }
 
+  .dark-mode svg.gear {
+  fill: #6d85f0;
+ }
+
+.dark-mode .calculate-ww.calculate-mobile {
+    box-shadow: 5px 5px 8px #313549, 0px -5px 8px #050608;
+}
+
+.dark-mode .scrollbar-thumb {
+  background: #222534;
+  box-shadow: inset 3px 3px 4px #050608, inset -3px -3px 4px #313549;
+}
+
+.dark-mode .scrollbar-track.scrollbar-track-y.show {
+  box-shadow: inset 3px 3px 4px #050608, inset -3px -3px 4px #313549;
+  background: #6d85f1;
+  border-bottom: 1px solid #313549;
+}
 
 
 /* MOBILE OR IPADS */
