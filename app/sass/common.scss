@@ -117,6 +117,7 @@ body {
   background-color: #e5e8f6;
   box-shadow: -10px -10px 10px #fff, 10px 10px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .tooltip {
@@ -939,6 +940,7 @@ body .scrollbar-thumb {
     padding: 10px;
     box-sizing: border-box;
     width: 100%;
+    display: inline-block;
   }
 
   .more-w.show {
