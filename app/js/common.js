@@ -366,7 +366,7 @@ window.onload = () => {
 				<div class="member" data-name="${lsMobj.mNamesP.mn[i]}" data-salary="${lsMobj.mNamesP.ms[i]}">
 				  <span class="edit">
 				    <svg class="gear">
-                      <use xlink:href="#gear"></use>
+                      <use xlink:href="app/img/sprite.svg#gear"></use>
                     </svg>
                   </span>
 				  <div class="m-name-w">
