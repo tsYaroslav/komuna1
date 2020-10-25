@@ -890,12 +890,13 @@ body .scrollbar-thumb {
 
   button:hover {    
       box-shadow: 5px 5px 8px #a3a3a3, -5px -5px 8px #dddddd;
+      transition: .15s;
   }
 
   .dark-mode button:hover {
-    box-shadow: 0px 0px 0px #050608, 0px 0px 0px #313549, inset 5px 5px 10px #050608, inset -5px -5px 10px #313549;
-    transition: .1s;
-  }
+    box-shadow: 5px 5px 8px #050608, -5px -5px 8px #313549;
+    transition: .15s;
+}
 
   // button:active {
   //       box-shadow: 0px 0px 0px #a3a3a3, 0px 0px 0px #dddddd, inset 5px 5px 10px #a3a3a3, inset -5px -5px 10px #dddddd;
