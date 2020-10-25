@@ -1,5 +1,10 @@
 'use strict'
 
+/* dark mode */
+if(Number(localStorage.darkMode) === 1) {
+	body.classList.add("dark-mode");
+	document.querySelector('#darkmode-switch').setAttribute("checked", "checked");
+}
 // class MemberProto {
 // 	constructor(salary){
 // 		salary = this.salary;
@@ -342,6 +347,17 @@ function localStorageData(topayArr, toPayArrProcent){
 
 window.onload = () => {
 	(function (){
+		// if(Number(localStorage.darkMode) === 1) {
+		// 	body.classList.add("dark-mode");
+		// 	document.querySelector('#darkmode-switch').setAttribute("checked", "checked");
+		// }
+		// preloader
+		document.body.classList.add('loaded-hiding');
+		window.setTimeout(function () {
+		  document.body.classList.add('loaded');
+		  document.body.classList.remove('loaded-hiding');
+		}, 500);
+		
 		// Reading members from locastorage data and inserting it to html 
 		let lsMobj = JSON.parse(localStorage.mNames);
 		members.innerHTML = "";	
@@ -387,10 +403,6 @@ window.onload = () => {
 		}
 	}());
 
-	if(Number(localStorage.darkMode) === 1) {
-		body.classList.add("dark-mode");
-		document.querySelector('#darkmode-switch').setAttribute("checked", "checked");
-	}
 };
 
 
@@ -440,25 +452,25 @@ logo.addEventListener('mouseleave', () => {
 /* SCROLL TO TOP */
 
 // For mobile using native scrollbar and scroll to top
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-	document.querySelector("body").addEventListener('click', (e) => {
-		if(e.target.classList.contains("calculate")) {
-			window.scrollTo({
-			    top: 0,
-			    behavior: "smooth"
-			});
-		}
-	});
-} 
+// if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+// 	document.querySelector("body").addEventListener('click', (e) => {
+// 		if(e.target.classList.contains("calculate")) {
+// 			window.scrollTo({
+// 			    top: 0,
+// 			    behavior: "smooth"
+// 			});
+// 		}
+// 	});
+// } 
 // For desktop using custom scrollbar and scroll to top
-else {
-	let scrollbar = Scrollbar.init(document.querySelector('.wrapper'),{
-		damping: 0.1,
-		alwaysShowTracks: true
-	});
-	document.querySelector("body").addEventListener('click', e => {
-		if(e.target.classList.contains("calculate")) {
-			scrollbar.scrollTo(0, 0, 250);
-		}
-	}); 
-}
+// else {
+// 	let scrollbar = Scrollbar.init(document.querySelector('.wrapper'),{
+// 		damping: 0.1,
+// 		alwaysShowTracks: true
+// 	});
+// 	document.querySelector("body").addEventListener('click', e => {
+// 		if(e.target.classList.contains("calculate")) {
+// 			scrollbar.scrollTo(0, 0, 250);
+// 		}
+// 	}); 
+// }

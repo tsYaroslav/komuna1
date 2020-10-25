@@ -4,18 +4,20 @@
   <title>KOMUNA</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="app/css/main.css">
   <link rel="stylesheet" href="app/css/normalize.css">
-<!--   <link rel="stylesheet" href="css/simplebar.min.css"> -->
-<!--   <script src="js/simplebar.min.js"></script> -->
-  <script src="app/js/smooth-scrollbar.js"></script>
-<!--   <script src="js/zenscroll-min.js"></script> -->
-
-<!-- 
-<link type="text/css" href="css/OverlayScrollbars.css" rel="stylesheet"/>
-<script type="text/javascript" src="js/OverlayScrollbars.min.js"></script> -->
+  <link rel="stylesheet" href="app/css/common.css">
+  
 </head>
-<body  id="body" >
+<body  id="body">
+
+  <div class="preloader-w">
+    <div class="preloader-item">
+        <svg class="preloader">
+          <use xlink:href="sprite.svg#preloader"></use>
+       </svg>
+    </div>
+  </div>
+
   <div class="tooltip"></div>
   <div class="blur-overlay"></div>
   <div class="wrapper">
@@ -26,22 +28,22 @@
               <linearGradient id="logo-gradient" x1="50%" y1="0%" x2="50%" y2="100%" > 
                   
                   <stop offset="0%" stop-color="#7A5FFF">
-                      <animate attributeName="stop-color" values="#bac1e1; #f6f6f6;  #bac1e1;" dur="4s" repeatCount="indefinite"></animate>
+                      <animate attributeName="stop-color" values="#b9c1e1; #6d85f0;  #b9c1e1;" dur="4s" repeatCount="indefinite"></animate>
                   </stop>
 
                   <stop offset="45%" stop-color="#01FF89">
-                      <animate attributeName="stop-color" values="#bac1e1; #f6f6f6; #bac1e1" dur="8s" repeatCount="indefinite"></animate>
+                      <animate attributeName="stop-color" values="#b9c1e1; #6d85f0; #b9c1e1" dur="8s" repeatCount="indefinite"></animate>
                   </stop>
                 
                   <stop offset="100%" stop-color="#f64f59">
-                      <animate attributeName="stop-color" values="#bac1e1; #f6f6f6; #bac1e1" dur="6s" repeatCount="indefinite"></animate>
+                      <animate attributeName="stop-color" values="#b9c1e1; #6d85f0; #b9c1e1" dur="6s" repeatCount="indefinite"></animate>
                   </stop>
               </linearGradient> 
             </defs>
           <g id="Layer_1-2" data-name="Layer 1">
             <!-- <path fill="url('#logo-gradient')" -->
             <!-- <path fill="rgba(0, 0, 0, 0.05)" -->
-            <path fill="rgba(0, 0, 0, 0.05)" d="M103.75,116.11q6.42,7.18,6.41,12.14t-7.77,11.65q-7.76,6.71-12.71,6.7t-11.94-8.16L35.4,90.15V129a57.77,57.77,0,0,1-.3,7,16,16,0,0,1-1.9,5.2q-2.8,5.4-15.6,5.4-14,0-16.4-7.6Q0,135.8,0,128.8V17.6a58,58,0,0,1,.3-6.9A16,16,0,0,1,2.2,5.4Q5,0,17.8,0q14,0,16.6,7.4a39.63,39.63,0,0,1,1,10.4V56l.1-.11v.26Q61.57,26.81,77.74,8q6.78-8,11.84-8t12.81,6.7q7.77,6.69,7.77,11.65T104.34,30.1q-11.27,13-35,35.72L61.62,73.2Q91.32,101.74,103.75,116.11Z"/></g>
+            <path fill="url('#logo-gradient')" d="M103.75,116.11q6.42,7.18,6.41,12.14t-7.77,11.65q-7.76,6.71-12.71,6.7t-11.94-8.16L35.4,90.15V129a57.77,57.77,0,0,1-.3,7,16,16,0,0,1-1.9,5.2q-2.8,5.4-15.6,5.4-14,0-16.4-7.6Q0,135.8,0,128.8V17.6a58,58,0,0,1,.3-6.9A16,16,0,0,1,2.2,5.4Q5,0,17.8,0q14,0,16.6,7.4a39.63,39.63,0,0,1,1,10.4V56l.1-.11v.26Q61.57,26.81,77.74,8q6.78-8,11.84-8t12.81,6.7q7.77,6.69,7.77,11.65T104.34,30.1q-11.27,13-35,35.72L61.62,73.2Q91.32,101.74,103.75,116.11Z"/></g>
           </g>
         </svg>
       </div>  
@@ -52,7 +54,7 @@
             <div class="member" data-name="Me" data-salary="10">
               <span class="edit asd">
                 <svg class="gear">
-                   <use xlink:href="#gear"></use>
+                   <use xlink:href="sprite.svg#gear"></use>
                 </svg>
               </span>
               <div class="m-name-w">
@@ -83,7 +85,7 @@
 
       <div class="dots">
         <svg class="dash">
-           <use xlink:href="#dash"></use>
+           <use xlink:href="sprite.svg#dash"></use>
         </svg>
       </div>
 
@@ -107,9 +109,9 @@
         </div>  
       </section>
 
-      <div class="dots" title="Наприклад, необхідність лікування за своїм місцем проживання, відсутність коштів для прибуття до суду, який знаходиться за місцем проживання відповідача тощо">
+      <div class="dots">
         <svg class="dash">
-           <use xlink:href="#dash"></use>
+           <use xlink:href="sprite.svg#dash"></use>
         </svg>
       </div>
 
@@ -139,7 +141,7 @@
 
       <div class="dots">
         <svg class="dash">
-           <use xlink:href="#dash"></use>
+           <use xlink:href="sprite.svg#dash"></use>
         </svg>
       </div>
       <div class="error-message"></div>
@@ -166,7 +168,7 @@
 
       <div class="dots">
         <svg class="dash">
-           <use xlink:href="#dash"></use>
+           <use xlink:href="sprite.svg#dash"></use>
         </svg>
       </div>
       <div class="error-message"></div>
@@ -188,7 +190,7 @@
 
       <div class="dots">
         <svg class="dash">
-           <use xlink:href="#dash"></use>
+           <use xlink:href="sprite.svg#dash"></use>
         </svg>
       </div>
       <div class="error-message"></div>
@@ -201,44 +203,8 @@
     <div class="calculate-w">
       <button class="calculate">CALCULATE</button>
     </div> 
-  </section>
-     
+  </section> 
   <script src="app/js/slip.js"></script>  
   <script src="app/js/common.js"></script>  
-<!-- SVG-sprite  -->
-
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <symbol id="dash"  viewBox="0 0 119 28.33">
-        <g id="Refresh_1_">
-          <path  d="M104.8,28.3H14.2C6.3,28.3,0,22,0,14.2v0C0,6.3,6.3,0,14.2,0h90.7c7.8,0,14.2,6.3,14.2,14.2v0
-    C119,22,112.7,28.3,104.8,28.3z"/>
-        </g>
-    </symbol>
-    <symbol id="gear"  x="0px" y="0px" viewBox="0 0 512 512">
-    <g>
-      <path d="M256,133.6c-67.5,0-122.4,54.9-122.4,122.4S188.5,378.4,256,378.4S378.4,323.5,378.4,256
-        S323.5,133.6,256,133.6z M256,347.8c-50.6,0-91.8-41.2-91.8-91.8s41.2-91.8,91.8-91.8s91.8,41.2,91.8,91.8S306.6,347.8,256,347.8z"
-        />
-      <path d="M500,197.7l-39.4-8.6c-3.4-10.5-7.7-20.7-12.7-30.5l21.8-33.9c3.9-6.1,3-14-2.1-19.1l-61.3-61.3
-        c-5.1-5.1-13-5.9-19.1-2.1l-33.9,21.8c-9.8-5-20.1-9.2-30.5-12.7L314.3,12c-1.5-7-7.8-12-14.9-12h-86.7c-7.2,0-13.4,5-14.9,12
-        l-8.6,39.4c-10.5,3.4-20.7,7.7-30.5,12.7l-33.9-21.8c-6.1-3.9-14-3-19.1,2.1l-61.3,61.3c-5.1,5.1-5.9,13-2.1,19.1l21.8,33.9
-        c-5,9.8-9.2,20.1-12.7,30.5L12,197.7c-7,1.5-12,7.8-12,14.9v86.7c0,7.2,5,13.4,12,14.9l39.4,8.6c3.4,10.5,7.7,20.7,12.7,30.5
-        l-21.8,33.9c-3.9,6.1-3,14,2.1,19.1l61.3,61.3c5.1,5.1,13,5.9,19.1,2.1l33.9-21.8c9.8,5,20.1,9.2,30.5,12.7l8.6,39.4
-        c1.5,7,7.8,12,14.9,12h86.7c7.2,0,13.4-5,14.9-12l8.6-39.4c10.5-3.4,20.7-7.7,30.5-12.7l33.9,21.8c6.1,3.9,14,3,19.1-2.1l61.3-61.3
-        c5.1-5.1,5.9-13,2.1-19.1l-21.8-33.9c5-9.8,9.2-20.1,12.7-30.5l39.4-8.6c7-1.5,12-7.8,12-14.9v-86.7C512,205.5,507,199.2,500,197.7
-        z M481.4,287l-36.1,7.8c-5.5,1.2-10,5.4-11.5,10.8c-4,14.2-9.7,28-16.9,40.9c-2.8,4.9-2.6,11,0.5,15.8l20,31.1l-43.9,43.9l-31.1-20
-        c-4.8-3.1-10.9-3.2-15.8-0.5c-12.9,7.3-26.7,13-40.9,16.9c-5.5,1.5-9.6,5.9-10.8,11.5l-7.8,36.1h-62l-7.8-36.1
-        c-1.2-5.5-5.4-10-10.8-11.5c-14.2-4-28-9.7-40.9-16.9c-4.9-2.8-11-2.6-15.8,0.5l-31.1,20l-43.9-43.9l20-31.1
-        c3.1-4.8,3.2-10.9,0.5-15.8c-7.3-12.9-13-26.7-17-40.9c-1.5-5.5-5.9-9.6-11.5-10.8L30.6,287v-62l36.1-7.8c5.5-1.2,10-5.4,11.5-10.8
-        c4-14.2,9.7-28,16.9-40.9c2.8-4.9,2.6-11-0.5-15.8l-20-31.1l43.9-43.9l31.1,20c4.8,3.1,10.9,3.2,15.8,0.5
-        c12.9-7.3,26.7-13,40.9-16.9c5.5-1.5,9.6-5.9,10.8-11.5l7.8-36.1h62l7.8,36.1c1.2,5.5,5.4,10,10.8,11.5c14.2,4,28,9.7,40.9,16.9
-        c4.9,2.8,11,2.6,15.8-0.5l31.1-20l43.9,43.9l-20,31.1c-3.1,4.8-3.2,10.9-0.5,15.8c7.3,12.9,13,26.7,17,40.9
-        c1.5,5.5,5.9,9.6,11.5,10.8l36.1,7.8V287z"/>
-    </g>
-    </symbol>
-
-</svg>
-
-<!-- SVG-sprite  -->
 </body>
 </html>
