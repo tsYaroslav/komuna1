@@ -1,10 +1,5 @@
 'use strict'
 
-if(Number(localStorage.darkMode) === 1) {
-	body.classList.add("dark-mode");
-	document.querySelector('#darkmode-switch').setAttribute("checked", "checked");
-}
-
 function toPay(salaryArrValues, salaryArrSum, billsValuesArrey, billsArreySum){
 	let toPayArr = [],
 		toPayArrProcent = []; 
