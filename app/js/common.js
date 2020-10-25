@@ -177,7 +177,7 @@ okForAdd.addEventListener("click", e => {
 	    <div class="member" data-name="${newMemberName}" data-salary="${newMemberSalary}">
 	      <span class="edit">
 			<svg class="gear">
-              <use xlink:href="#gear"></use>
+              <use xlink:href="app/img/sprite.svg#gear"></use>
             </svg>
 	      </span>
 	      <div class="m-name-w">
