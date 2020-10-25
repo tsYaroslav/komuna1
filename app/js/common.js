@@ -405,23 +405,6 @@ window.onload = () => {
 
 };
 
-
-/* SWIPE TO DELETE ITEMS */
-function setupSlip(list) {
-   list.addEventListener('slip:swipe', function(e) {
-        // e.target swiped
-            e.target.parentNode.removeChild(e.target);            
-    });
-
-    list.addEventListener('slip:reorder', function(e){
-        e.target.parentNode.insertBefore(e.target, e.detail.insertBefore);
-        return false;
-    }, false);
-    return new Slip(list);
-}
-setupSlip(document.querySelector('.members'));
-setupSlip(document.querySelector('.bills'));
-
 /* DARK MODE */
 const logo = document.querySelector(".logo");
 logo.addEventListener('click', () => {
