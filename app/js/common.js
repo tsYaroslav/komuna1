@@ -1,17 +1,9 @@
 'use strict'
 
-// class MemberProto {
-// 	constructor(salary){
-// 		salary = this.salary;
-// 	}
-// }
-
-// let member1 = new MemberProto(),
-// 	member2 = new MemberProto(),
-//  	member3 = new MemberProto(),
-// 	member4 = new MemberProto();
-
-// let objArr = [member1, member2, member3, member4];
+if(Number(localStorage.darkMode) === 1) {
+	body.classList.add("dark-mode");
+	document.querySelector('#darkmode-switch').setAttribute("checked", "checked");
+}
 
 function toPay(salaryArrValues, salaryArrSum, billsValuesArrey, billsArreySum){
 	let toPayArr = [],
