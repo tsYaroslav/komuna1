@@ -811,7 +811,8 @@ body .scrollbar-thumb {
     backdrop-filter: blur(8px);
     text-align: center; }
   .calculate-ww.calculate-mobile .calculate {
-    width: 280px; } }
+    width: 280px;
+    margin-bottom: 0; } }
 
 /* scrollbar styling */
 body {
